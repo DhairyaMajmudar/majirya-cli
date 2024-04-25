@@ -1,0 +1,43 @@
+{
+  "name": "majirya-cli",
+  "version": "0.0.57",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "majirya": "./dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "dev2": "node dist/index.js",
+    "dev": "tsc -w"
+  },
+  "keywords": [
+    "cli",
+    "nextjs",
+    "drizzle",
+    "next-auth",
+    "rails",
+    "shadcn",
+    "authjs"
+  ],
+  "author": "Dhairya Majmudar",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^3.0.1",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "consola": "^3.2.3",
+    "execa": "^8.0.1",
+    "figlet": "^1.7.0",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "typescript": "^5.1.6"
+  }
+}

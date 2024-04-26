@@ -1,5 +1,9 @@
 import consola from "consola";
-import { BackendBuilder, FrontendBuilder } from "../../Builders/MernBuilder.js";
+import {
+  BackendBuilder,
+  FrontendBuilder,
+  FrontendAndBackendBuilder,
+} from "../../Builders/MernBuilder.js";
 import { NextBuilder } from "../../Builders/NextBuilder.js";
 
 export const initProject = async () => {
@@ -21,16 +25,17 @@ export const initProject = async () => {
           options: [
             "Frontend Folders Only",
             "Frontend Folders + Backend Folders",
-            "Backend Only Folders",
+            "Backend Folders Only",
           ],
         }
       );
 
-      if (FolderOptions === "Backend Only Folders") {
+      if (FolderOptions === "Backend Folders Only") {
         BackendBuilder();
-      } else if (FolderOptions === "Frontend Only Folders") {
+      } else if (FolderOptions === "Frontend Folders Only") {
         FrontendBuilder();
       } else {
+        FrontendAndBackendBuilder();
       }
     }
 

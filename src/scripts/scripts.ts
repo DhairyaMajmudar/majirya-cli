@@ -1,5 +1,7 @@
 export const viteCreate = "npm create vite@latest";
 
+export const packageInit = "npm init && npm i express mongoose dotenv cors";
+
 export const backendFolder =
   "mkdir src src/data src/routes src/controllers src/middlewares src/models";
 

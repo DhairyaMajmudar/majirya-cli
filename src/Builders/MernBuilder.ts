@@ -3,6 +3,7 @@ import { execSync } from "child_process";
 import {
   backendFolder,
   backendFolderFiles,
+  packageInit,
   viteCreate,
 } from "../scripts/scripts.js";
 
@@ -22,9 +23,7 @@ export const BackendBuilder = async () => {
     await new Promise((resolve) => setTimeout(resolve, 700));
 
     consola.info("Inititalising package.json");
-    execSync("npm init", {
-      stdio: "inherit",
-    });
+    execSync(packageInit, { stdio: "inherit" });
 
     consola.success("package.json created successfully!");
 
@@ -32,13 +31,9 @@ export const BackendBuilder = async () => {
 
     consola.info("Inititalising Folder Structure");
 
-    execSync(backendFolder, {
-      stdio: "inherit",
-    });
+    execSync(backendFolder, { stdio: "inherit" });
 
-    execSync(backendFolderFiles, {
-      stdio: "inherit",
-    });
+    execSync(backendFolderFiles, { stdio: "inherit" });
   } else {
     consola.info("Creating Backend Folders in Typescript...");
   }

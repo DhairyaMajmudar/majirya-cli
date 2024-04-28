@@ -12,3 +12,4 @@
         Adding Auth template (Backend + Frontend)
     For NextJS
         Think more and expolore more....
+4. Add a readme and installtion file.

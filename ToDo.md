@@ -13,3 +13,4 @@
     For NextJS
         Think more and expolore more....
 4. Add a readme and installtion file.
+5. Style The CLI

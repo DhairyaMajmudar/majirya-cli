@@ -36,7 +36,7 @@ export const FrontendBuilder = async () => {
   execSync(viteCreate, { stdio: "inherit" });
 };
 
-export const FrontendAndBackendBuilder = async () => {
+export const FullStackBuilder = async () => {
   consola.start("Creating Frontend project...");
   await FrontendBuilder();
 

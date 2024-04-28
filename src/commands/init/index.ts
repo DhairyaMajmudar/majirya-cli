@@ -2,7 +2,7 @@ import consola from "consola";
 import {
   BackendBuilder,
   FrontendBuilder,
-  FrontendAndBackendBuilder,
+  FullStackBuilder,
 } from "../../Builders/MernBuilder.js";
 import { NextBuilder } from "../../Builders/NextBuilder.js";
 
@@ -19,23 +19,19 @@ export const initProject = async () => {
       consola.start("Project Initialization Started...");
 
       const FolderOptions = await consola.prompt(
-        "Please Choose the Folder Structure for your project",
+        "Please select the project for your choice",
         {
           type: "select",
-          options: [
-            "Frontend Folders Only",
-            "Frontend Folders + Backend Folders",
-            "Backend Folders Only",
-          ],
+          options: ["Frontend Project", "Backend Project", "Fullstack Project"],
         }
       );
 
-      if (FolderOptions === "Backend Folders Only") {
+      if (FolderOptions === "Backend Project") {
         BackendBuilder();
-      } else if (FolderOptions === "Frontend Folders Only") {
+      } else if (FolderOptions === "Frontend Project") {
         FrontendBuilder();
       } else {
-        FrontendAndBackendBuilder();
+        FullStackBuilder();
       }
     }
 

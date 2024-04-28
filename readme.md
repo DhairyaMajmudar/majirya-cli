@@ -22,4 +22,4 @@ initialse the projects
 
 ## Installation
 
-<center>Developed by Dhairya Majmudar with ♥️</center>
+Developed by Dhairya Majmudar with ♥️

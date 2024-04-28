@@ -1,6 +1,6 @@
 {
   "name": "majirya-cli",
-  "version": "0.0.57",
+  "version": "0.0.77",
   "description": "CLI tool for creating Frontend, Backend and Fullstack projects hassle free.",
   "main": "index.js",
   "type": "module",

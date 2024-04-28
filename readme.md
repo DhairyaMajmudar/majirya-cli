@@ -6,6 +6,10 @@
 
 #### Majirya CLI removes the hastle of mannualy creating the project structure. Using Majirya CLI devlopers can quickly creates the project structure of thier own choice with only a command or two.
 
+# Quick install
+
+`npm i -g majirya-cli`
+
 # Commands
 
 1. `majirya init`
@@ -20,6 +24,10 @@ initialse the projects
    - Banckend Only Project
    - Full Stack Project
 
-## Installation
+## Local Installation
 
-Developed by Dhairya Majmudar with ♥️
+1. Fork and Clone repo. in local machine.
+2. `npm i && npm run dev` ( In terminal of local clone)
+3. `npm run dev2` (In a second terminal of yourtest folder) pls. once update the `package.json` dev2 script such that it targets to actual path of `dist/index.js` file.
+
+<center>Developed by Dhairya Majmudar with ♥️</center>

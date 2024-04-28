@@ -1,5 +1,10 @@
 import consola from "consola";
 import { execSync } from "child_process";
+import {
+  backendFolder,
+  backendFolderFiles,
+  viteCreate,
+} from "../scripts/scripts.js";
 
 export const BackendBuilder = async () => {
   consola.start("Creating Backend Folders...");
@@ -26,12 +31,14 @@ export const BackendBuilder = async () => {
     await new Promise((resolve) => setTimeout(resolve, 500));
 
     consola.info("Inititalising Folder Structure");
-    execSync(
-      "touch index.js && mkdir data && touch .gitignore && touch .env && mkdir src && mkdir src/routes && mkdir src/controllers && mkdir src/middlewares && mkdir src/models",
-      {
-        stdio: "inherit",
-      }
-    );
+
+    execSync(backendFolder, {
+      stdio: "inherit",
+    });
+
+    execSync(backendFolderFiles, {
+      stdio: "inherit",
+    });
   } else {
     consola.info("Creating Backend Folders in Typescript...");
   }
@@ -42,15 +49,18 @@ export const FrontendBuilder = async () => {
 
   await new Promise((resolve) => setTimeout(resolve, 700));
 
-  execSync("npm create vite@latest", { stdio: "inherit" });
+  execSync(viteCreate, { stdio: "inherit" });
 };
 
 export const FrontendAndBackendBuilder = async () => {
-  consola.start("Creating Backend Project...");
+  consola.start("Creating Backend project...");
 
-  consola.start("Inititalising Vite project...");
+  await BackendBuilder();
+
+  consola.success("Backend Project Created Successfully!");
 
   await new Promise((resolve) => setTimeout(resolve, 700));
 
-  execSync("npm create vite@latest", { stdio: "inherit" });
+  consola.start("Creating Frontend project...");
+  await FrontendBuilder();
 };

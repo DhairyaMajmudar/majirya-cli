@@ -1,8 +1,8 @@
 # Majirya CLI
 
-### Majirya CLI is a coommand line tool for quickly creating backend , frontend , full stack or a NextJs project structure.
+### Majirya CLI is a command line tool for quickly creating backend, frontend, or full stack NextJs project structure.
 
-#### A good development practise is to segregrate the code in several different folders and files. And of doing so a fixed project structure is followed.
+#### A good development practice is to segregate the code in several different folders and files. And for doing so a project structure is followed.
 
 #### Majirya CLI removes the hastle of mannualy creating the project structure. Using Majirya CLI devlopers can quickly creates the project structure of thier own choice with only a command or two.
 
